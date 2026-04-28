@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter Theodore Boris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --text-primary: #1a1a18;
+    --text-secondary: #5a5a55;
+    --text-tertiary: #9a9a94;
+    --border-light: rgba(0,0,0,0.1);
+    --border-medium: rgba(0,0,0,0.18);
+    --bg: #fafaf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #f0f0ec;
+      --text-secondary: #a0a09a;
+      --text-tertiary: #606060;
+      --border-light: rgba(255,255,255,0.1);
+      --border-medium: rgba(255,255,255,0.18);
+      --bg: #141412;
+    }
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  .site {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 2rem 6rem;
+  }
+  .page-header { margin-bottom: 3.5rem; }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .page-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-top: 0.5px solid var(--border-light);
+    align-items: start;
+  }
+  .project:last-child { border-bottom: 0.5px solid var(--border-light); }
+  .project-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border-medium);
+    color: var(--text-secondary);
+  }
+  .project h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+  .project-desc { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .stat-big {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1;
+    text-align: right;
+  }
+  .project-stat {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    margin-top: 4px;
+    display: block;
+    text-align: right;
+  }
+  @media (max-width: 500px) { .project { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="site">
+
+  <div class="page-header">
+    <p class="eyebrow">Peter Theodore Boris · Stanford University</p>
+    <h1>Projects</h1>
+  </div>
+
+  <div class="project">
+    <div>
+      <div class="project-meta">
+        <span class="tag">Propulsion</span>
+        <span class="tag">Cryogenics</span>
+        <span class="tag">Summer 2026</span>
+      </div>
+      <h3>Cryogenic Leak Tolerance in Liquid Rocket Propulsion</h3>
+      <p class="project-desc">Building a subscale, pressure-fed liquid rocket propulsion module to study leak onset across repeated thermal cycling and vibration. The core question: can indirect signals — pressure micro-fluctuations, acoustic emissions, thermal gradients — identify leaks before they become mission-ending? Executed at Impulse Space with access to cryogenic handling infrastructure and fabrication resources.</p>
+    </div>
+    <div>
+      <span class="stat-big">2026</span>
+      <span class="project-stat">Impulse Space</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <div>
+      <div class="project-meta">
+        <span class="tag">Robotics</span>
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">Ongoing</span>
+      </div>
+      <h3>ReachBot — Autonomous Locomotion in Extreme Environments</h3>
+      <p class="project-desc">Reinforcement-learning locomotion policies for operation in Martian cave systems, supervised by Prof. Marco Pavone at Stanford's Autonomous Systems Lab. When the original hardware kit failed, I raised $20K to rebuild the system from scratch — which led to a deeper understanding of where the design assumptions broke down. Secured $50K in additional external funding for hardware upgrades.</p>
+    </div>
+    <div>
+      <span class="stat-big">$70K</span>
+      <span class="project-stat">Raised · ASL</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <div>
+      <div class="project-meta">
+        <span class="tag">Software</span>
+        <span class="tag">Astrophotography</span>
+      </div>
+      <h3>Eclipse Imager — Automated High-Speed Eclipse Imaging</h3>
+      <p class="project-desc">Built an iOS app that automates camera control during solar eclipse totality, solving a hard constraint: cameras can't be manually operated fast enough during the 2–4 minute totality window. Developed in the field after experiencing the limitation firsthand during expedition work.</p>
+    </div>
+    <div>
+      <span class="stat-big">App</span>
+      <span class="project-stat">iOS · Self-funded</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <div>
+      <div class="project-meta">
+        <span class="tag">Field Research</span>
+        <span class="tag">NASA</span>
+        <span class="tag">2021</span>
+      </div>
+      <h3>Antarctica Eclipse Livestream — 40 Million Viewers</h3>
+      <p class="project-desc">Designed and executed a total solar eclipse livestream from Union Glacier, Antarctica as part of a three-person team. Two weeks in an unheated tent at −25°C. The stream reached 40 million viewers globally — the first 8K eclipse broadcast from the continent. Built the imaging and transmission systems that made it work in those conditions.</p>
+    </div>
+    <div>
+      <span class="stat-big">40M</span>
+      <span class="project-stat">Viewers · Antarctica</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <div>
+      <div class="project-meta">
+        <span class="tag">Instrumentation</span>
+        <span class="tag">NASA</span>
+        <span class="tag">2023</span>
+      </div>
+      <h3>Osiris-REx Reentry Spectrograph</h3>
+      <p class="project-desc">Designed and built a custom spectrograph to measure 777 nm oxygen emissions during the Osiris-REx sample return capsule re-entry over Nevada. The instrument supported research on atmospheric plasma physics and spacecraft re-entry dynamics in collaboration with the NASA-HORIS mission team.</p>
+    </div>
+    <div>
+      <span class="stat-big">2023</span>
+      <span class="project-stat">NASA · Wells, NV</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
